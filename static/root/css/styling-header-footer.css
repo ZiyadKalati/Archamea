@@ -1,0 +1,128 @@
+header, section, footer, aside, nav, article, figure, figcaption {
+  display: block;
+  }
+
+body {
+  background-color:#F8FCFF;
+  margin: 0px;
+  text-align: center;
+  }
+  
+.wrapper {
+  width: 960px;
+  margin: 15px auto;
+  }
+
+.noselect {
+  user-select: none;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+header {
+  height: 190px;
+  position: relative;
+  }
+
+hgroup.site-heading {
+  position: relative;
+  top: 5px;
+  right: 70px;
+  font-size: 46px;
+  color: #816E06;
+  }
+
+#site-name-heading, #site-heading-img {
+  display: inline;
+  position: inherit;
+  }
+
+#site-heading-img {
+  height: 180px;
+  vertical-align: middle;
+  z-index: 1;
+  }
+
+h1, h2, h3, h4{
+  font-weight: normal;
+  }
+
+ul {
+  margin: 0px;
+  list-style: none;
+  }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  }
+
+a:hover {
+  color: #1467AB;
+  }
+
+nav li{
+  display: inline;
+  padding: 10px;
+  }
+
+.primary-nav {
+  position: relative;
+  bottom: 50px;
+  margin: 0px auto;
+  padding-bottom: 0px;
+  }
+
+.primary-nav ul {
+  padding: 0px 0px 6px 0px;
+  border-top: 1px solid gray;
+  }
+
+.primary-nav ul li {
+  position: relative;
+  z-index: 3;
+  bottom: 7px;
+  margin-right: 10px;
+  padding: 13px 5px;
+  }
+
+.primary-nav .nav-logo {
+  margin-right: 30px;
+  }
+
+.primary-nav .nav-logo img {
+  position: relative;
+  top: 12px;
+  border-radius: 274px;
+  max-width: 30px;
+  max-height: 30px;
+  border: 2px solid gray;
+  }
+
+nav li:hover {
+  border: none;
+  cursor: pointer;
+  color: #1467AB;
+  background-color: #F0F9FF;
+  }
+
+.primary-nav .nav-logo:hover {
+  background-color: transparent;
+  cursor: default;
+  }
+
+footer {
+  font-size: 80%;
+  color: gray;
+  padding: 7px 0px 7px 0px;
+  width: 360px;
+  margin: auto;
+  }
+
+

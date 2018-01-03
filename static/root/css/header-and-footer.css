@@ -1,0 +1,75 @@
+body {
+  background-color: #dfbf9f;
+  }
+
+.primary-nav {
+  background-color: #806600;
+  }
+
+.primary-nav #site-name-heading img {
+  max-width: 1.5em;
+  max-height: 1.5em;
+  background-color: #806600;
+
+  }
+
+hgroup #site-heading-img {
+  max-height: 25px;
+  top: 3%;
+  z-index: 1;
+  }
+
+ #site-name-heading {
+
+/*    font-family: Times New Roman;
+    font-size: 2em;*/
+  }
+
+.primary-nav .nav-logo img {
+  max-width: 30px;
+  max-height: 30px;
+  border: 2px solid gray;
+  }
+
+/*
+#footer p {
+  font-size: 80%;
+  color: gray;
+  padding: 7px 0px 7px 0px;
+  width: 360px;
+  margin: auto;
+  }
+
+Doesnt even do anything*/
+
+@media (min-width: 992px)
+{
+  hgroup #site-name-heading {
+    display: inline;
+    color: #816E06;
+    font-family: Times New Roman;
+    font-size: 5em;
+  }
+
+hgroup #site-heading-img {
+  max-height: 80px;
+  z-index: 1;
+  }
+
+}
+
+@media(min-width: 576px) and (max-width: 992px)
+{
+  hgroup #site-name-heading {
+    display: inline;
+    color: #816E06;
+    font-family: Times New Roman;
+    font-size: 3em;
+  }
+
+hgroup #site-heading-img {
+  max-height: 40px;
+  z-index: 1;
+  }
+
+}

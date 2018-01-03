@@ -1,0 +1,141 @@
+h2, h2 a {
+  margin: 17px 0px 0px 0px;
+  padding-bottom: 3px;
+  color: #125B96;
+  vertical-align: center;
+  }
+
+h3 {
+  margin: 0px;
+  padding-bottom: 3px;
+  font-size: 93.75%;  /* ((15 / 16) * 100%) 16 comes from value of .other-articles font size */
+  }
+
+article {
+  margin: 0px auto 20px auto;
+  height: 120px;
+  border-bottom: 1px solid gray;
+  }
+
+article:last-child {
+  border: none;
+  }
+
+p {
+  margin: 10px 0px;
+  padding-bottom: 10px;
+  }
+
+.feature-article {
+  /*background-color: #F8FCFF;
+  position: relative;
+  z-index: 2;
+  border: 1px solid black;*/
+  height: 250px;
+  margin: 15px auto;
+  text-align: left;
+  }
+
+.feature-article-text {
+  position: relative;
+  top: 25px;
+  margin: 0px;
+  }
+
+.feature-article h2 {
+  font-size: 32px;
+  padding-bottom: 5px;
+  width: 450px;
+  }
+
+h2 a:hover {
+  text-decoration: underline;
+  }
+
+aside {
+  position: absolute;
+  left: 1225px;
+  top: 240px;
+  font-size: 20px;
+  width: 150px;
+  height: 180px;
+  color: gray;
+  border: 1px solid gray;
+  padding: 10px;
+  }
+
+.feature-article h3 {
+  font-size: 16px;
+  }
+
+.feature-article p {
+  padding: 15px 0px;
+  font-size: 18px;
+  }
+
+.feature-article img {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  max-height: 100%;
+  float: left;
+  }
+
+.other-articles {
+  /*border: 1px solid black;*/
+  padding: 5px;
+  height: 610px;
+  text-align: left;
+  overflow: hidden;
+  }
+
+.other-articles ul {
+  margin: 15px 0px 15px 0px;
+  }
+
+.other-articles li {
+  border-bottom: 1px solid gray;
+  }
+
+.other-articles li:hover {
+  border-bottom: 1px solid #125B96;
+  }
+
+.other-articles nav .current {
+  border: none;
+  color: #125B96;
+  }
+  
+.options {
+  float: right;
+  margin-right: 20px;
+  }
+  
+.the-articles {
+  width: 95%;
+  margin: 0px auto;
+  display: none;
+  position: relative;
+  float: left;
+  font-size:16px;
+  }
+  
+.the-articles:nth-child(2) {
+  display: block;
+  padding-left: 20px;
+}
+
+article img {
+  margin-right: 15px;
+  width: 96px;
+  height: auto;
+  border-radius: 96px;
+  float: left;
+  box-shadow: 0px 0px 0px 1px gray;
+  }
+  
+article img:hover {
+  box-shadow: 0px 0px 0px 2px gray;
+  }
+
+
