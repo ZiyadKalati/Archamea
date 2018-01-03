@@ -32,7 +32,7 @@ def add_article(request):
 @method_decorator(login_required, name='dispatch')
 class ArticleCreate(CreateView):
     model = Article
-    fields = ['title', 'text', 'is_published']
+    fields = ['title', 'text', 'is_published', 'image_head']
 
     template_name = 'wiki/article_form.html'
 
@@ -94,7 +94,7 @@ def edit_article(request, slug):
 @method_decorator(login_required, name='dispatch')
 class ArticleUpdate(UpdateView):
     model = Article
-    fields = ['title', 'text', 'is_published']
+    fields = ['title', 'text', 'is_published', 'image_head']
 
     template_name = 'wiki/article_form.html'
 
