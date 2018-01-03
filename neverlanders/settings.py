@@ -26,7 +26,7 @@ SECRET_KEY = '&my0*q@9q5yabc)#0@yoo_g4zcnj%b+g_1qf0*yeq%!m-)-60$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['archamea.pythonanywhere.com']
 
 
 # Application definition
