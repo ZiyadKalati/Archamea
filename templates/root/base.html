@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Archamea</title>
+    {% load static %}
+
+{% comment %}
+    <link href="{% static "root/css/styling-header-footer.css" %}" type="text/css" rel="stylesheet" />
+{% endcomment %}
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="{% static "root/css/header-and-footer.css" %}" type="text/css" rel="stylesheet" />
+    {% block extra_head %}
+
+    {% endblock %}
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body style="background-color: #ffeecc;">
+    <div class="wrapper">
+      <header>
+
+
+{% comment %}
+        <hgroup class="site-heading text-center pt-2">
+          <h1 id="site-name-heading" class="pt-5">Archamea</h1>
+          <img src="{% static "root/images/phoenix-feather.png" %}" alt="Phoenix Feather" id="site-heading-img" class="img-fluid pb-1 px-2 position-absolute"/>
+        </hgroup>
+{% endcomment %}
+
+        <nav class="primary-nav navbar navbar-expand-md navbar-dark">
+          <div class="container-fluid">
+            <a href="/" id="site-name-heading" class="navbar-brand">
+              <img src="{% static "root/images/tattoo-phoenix.png" %}" alt="Phoenix Feather" max-width="30" class="rounded-circle mb-1"/>
+              Archamea
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav">
+                    <li class="home nav-item">
+                        <a class="nav-link" href="{% url 'wiki_article_add' %}">Create Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'wiki_article_index' %}">See All</a>
+                    </li>
+                    {% comment %}
+                    <li class="short-story nav-item">
+                        <a class="nav-link" href="all-short-stories.html">Short Story</a>
+                    </li>
+                    <li class="biography nav-item">
+                        <a class="nav-link" href="all-biographies.html">Biography</a>
+                    </li>
+                    <li class="non-fiction nav-item">
+                        <a class="nav-link" href="all-non-fiction.html">Non-Fiction</a>
+                    </li>
+                    {% endcomment %}
+                </ul>
+
+                {% if request.user.is_authenticated %}
+                    <li class="btn ml-auto text-white">
+                        {{ request.user }}
+                    </li>
+                    <a href="{% url 'auth_logout' %}" class=" text-white btn">Logout</a>
+                {% else %}
+                    <a class="ml-auto text-white btn" href="{% url 'registration_register' %}">Sign Up</a>
+                    <a class="text-white btn" href="{% url 'auth_login' %}">Login</a>
+                {% endif %}
+
+          </div>
+        </nav>
+
+          {% if request.user.is_authenticated %}
+          <div class="collapse" id="accountOptions">
+                <div class="ml-auto card card-body text-center" style="background-color: #ffeecc; width: 6rem">
+                    <button class="btn btn-link ml-auto"><a href="{% url 'auth_logout' %}" class="">Logout</a></button>
+                </div>
+            </div>
+          {% endif %}
+      </header>
+      {% block content %}
+
+      {% endblock %}
+      <div id="footer" class="mx-auto mb-2">
+          <div class="container text-center text-muted">
+              <p>&copy; 2017 Neverlanders</p>
+          </div>
+      </div>
+    </div><!-- .wrapper -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static "root/js/other-articles-tabs.js" %}"></script>
+  </body>
+</html>

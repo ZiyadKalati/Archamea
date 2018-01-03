@@ -1,0 +1,24 @@
+{% extends 'root/base.html' %}
+
+{% block content %}
+
+{% if article %}
+    <h1>Edit article {{ article }}</h1>
+{% else %}
+    <h1>Create new article</h1>
+{% endif %}
+
+{% if request.user.is_authenticated %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+        {{ edit_form.as_table }}
+    </table>
+    <input type="submit" name="submit" value="Submit">
+</form>
+{% else %}
+<p> You must be logged in to create a new article </p>
+{% endif %}
+
+{% endblock %}

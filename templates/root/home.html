@@ -1,0 +1,118 @@
+{% extends "root/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+    <link href="{% static "root/css/styling-home-page.css" %}" type="text/css" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+    <div class="feature-article container-fluid">
+        <a href="{% url 'wiki_article_detail' 'why-so-serious' %}">
+        <img src="{% static "root/images/joker-batman.jpg" %}" alt="Feature Article Joker" class="image-1 mr-4"/>
+        </a>
+        <div class="feature-article-text">
+            <h2>
+              <a href="{% url 'wiki_article_detail' 'why-so-serious' %}">Why So Serious</a>
+            </h2>
+            <h3>by Riju Sikdar</h3>
+            <p>{% lorem 30 w %}</p>
+        </div>
+      </div>
+      <div class="other-articles container-fluid">
+        <div class="">
+          <nav class="btn-group btn-group-toggle mt-3 ml-3" data-toggle="buttons">
+              <label class="short-story btn btn-outline-primary btn-sm active" id="short-story">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Short Story
+              </label>
+              <label class="biography btn btn-outline-primary btn-sm" id="biography">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Biography
+              </label>
+              <label class="non-fiction btn btn-outline-primary btn-sm" id="non-fiction">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Non-Fiction
+              </label>
+          </nav>
+          <section class="the-articles short-story shown">
+              <article class="article-1">
+                <a href="{% url 'wiki_article_detail' 'trees-are-people-too' %}"><img src="{% static "root/images/tree.png" %}"/></a>
+                <h2><a href="{% url 'wiki_article_detail' 'trees-are-people-too' %}">Trees Are People Too</a></h2>
+                <h3>by Tess Coman</h3>
+                <p>Article Summary</p>
+              </article>
+              <article class="article-2">
+                <a href="{% url 'wiki_article_detail' 'who-killed-the-mockingbird' %}"><img src="{% static "root/images/feathers.png" %}" /></a>
+                <h2><a href="{% url 'wiki_article_detail' 'who-killed-the-mockingbird' %}">Who Killed the Mockingbird</a></h2>
+                <h3>by Zeinah Kalati</h3>
+                <p>Article Summary</p>
+              </article>
+              <article class="article-3">
+                <a href="{% url 'wiki_article_detail' 'jealousy-is-never-a-good-thing' %}"><img src="{% static "root/images/character-design-3-crop.png" %}" /></a>
+                <h2><a href="{% url 'wiki_article_detail' 'jealousy-is-never-a-good-thing' %}">Jealousy is Never a Good Thing</a></h2>
+                <h3>by Olivia Wilde</h3>
+                <p>Article Summary</p>
+              </article>
+              <article class="article-4">
+                <a href="{% url 'wiki_article_detail' 'the-quitter-and-the-deserter' %}"><img src="{% static "root/images/deserter.png" %}" /></a>
+                <h2><a href="{% url 'wiki_article_detail' 'the-quitter-and-the-deserter' %}">The Quitter and the Deserter</a></h2>
+                <h3>by Adel Elkhodr</h3>
+                <p>Article Summary</p>
+              </article>
+          </section><!-- .the-articles .short-story -->
+          <section class="the-articles biography">
+              <article class="article-1">
+                <h2>None yet my friends</h2>
+              </article>
+              <article class="article-2">
+
+              </article>
+              <article class="article-3">
+
+              </article>
+              <article class="article-4">
+
+              </article>
+          </section><!-- .the-articles .biography-->
+          <section class="the-articles non-fiction">
+              <article class="article-1">
+                <a href="frustrations-of-a-traveler.html"><img src="{% static "root/images/traveler.png" %}" /></a>
+                <h2><a href="frustrations-of-a-traveler.html">Frustrations of a Traveler</a></h2>
+                <h3>by Riju Sikdar</h3>
+                <p>Article Summary</p>
+              </article>
+              <article class="article-2">
+
+              </article>
+              <article class="article-3">
+
+              </article>
+              <article class="article-4">
+
+              </article>
+            </section><!-- .the-articles .non-fiction-->
+            <section class="the-articles short-story">
+              <article class="article-1">
+                <a href="trees-are-people-too.html"><img src="{% static "root/images/tree.png" %}" /></a>
+                <h2><a href="trees-are-people-too.html">Trees Are People Too</a></h2>
+                <h3>by Tess Coman</h3>
+                <p>Article Summary</p>
+              </article>
+              <article class="article-2">
+                <a href="who-killed-the-mockingbird.html"><img src="{% static "root/images/feathers.png" %}" /></a>
+                <h2><a href="who-killed-the-mockingbird.html">Who Killed the Mockingbird</a></h2>
+                <h3>by Zeinah Kalati</h3>
+                <p>Article Summary</p>
+              </article>
+              <article class="article-3">
+                <a href="jealousy-is-never-a-good-thing.html"><img src="{% static "root/images/character-design-3-crop.png" %}" /></a>
+                <h2><a href="jealousy-is-never-a-good-thing.html">Jealousy is Never a Good Thing</a></h2>
+                <h3>by Olivia Wilde</h3>
+                <p>Article Summary</p>
+              </article>
+              <article class="article-4">
+                <a href="the-quitter-and-the-deserter.html"><img src="{% static "root/images/deserter.png" %}" /></a>
+                <h2><a href="the-quitter-and-the-deserter.html">The Quitter and the Deserter</a></h2>
+                <h3>by Adel Elkhodr</h3>
+                <p>Article Summary</p>
+              </article>
+            </section><!-- .the-articles .short-story -->
+          </div>
+      </div><!-- .other-articles -->
+{% endblock %}
