@@ -2,7 +2,7 @@
 
 {% load static %}
 {% block extra_head %}
-<link href="{% static "articles/css/styling-article.css" %}" type="text/css" rel="stylesheet" />
+
 {% endblock %}
 {% block content %}
 
@@ -26,11 +26,11 @@
     <div class="row">
         <hgroup class="col-2 offset-md-1">
             <div class="row">
-                <h1 class="main-article-heading">{{ article.title }}</h1>
-                <h3>
+                <h1 class="main-article-heading" style="color: #125B96">{{ article.title }}</h1>
+                <h5>
                     by
                     {{ article.author }}
-                </h3>
+                </h5>
             </div>
             <div class="row">
                 <li class="h6 mt-3 d-inline">
@@ -39,24 +39,24 @@
             </div>
         </hgroup>
         <article class="col-6">
-        {% lorem 4 p %}
+        {% lorem 3 p %}
         <p>{{ article.text|linebreaks }}</p>
         </article>
     </div>
 </section>
 
-<section class="related-articles container_24 container">
-    <h2 class="text-center">Related Articles</h2>
+<section class="related-articles container" style="border-top: 1px grey solid">
+    <h2 class="text-center mb-4 mt-3" style="color: #125B96">Related Articles</h2>
 <div class="row">
 
     {% for article in articles_list %}
-        <article class="grid_8 col-4">
+        <article class="col-4">
           <a href="{% url 'wiki_article_detail' article.slug %}"><img src="{{ article.image_head.url }}" class="d-block mx-auto rounded-circle" style="width: 96px"/></a>
             <h3 class="text-center h5 mt-4" ><a href="{% url 'wiki_article_detail' article.slug %}">{{ article.title }}</a></h3>
-          <h4 class="text-center h6">
+          <h6 class="text-center">
               by
               {{ article.author }}
-          </h4>
+          </h6>
           <p></p>
         </article>
     {% endfor %}
