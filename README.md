@@ -6,6 +6,7 @@ to activate that account. Only then can you log in. When logged in you can edit 
 create articles.
 
 /*************************** Problems Being Fixed *************************************/
+
 It's so incomplete because unexpected obstacles kept popping up. Here are the things I'm
 currently looking to fix:
 
