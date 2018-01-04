@@ -1,6 +1,6 @@
 # Archamea
 
-archamea.pythonanywhere.com
+                            archamea.pythonanywhere.com
 
 A basic django-powered website just for practice. It's a wiki site that allows for account
 creation and loggin in and out. When creating an account an email is sent to you with a link
