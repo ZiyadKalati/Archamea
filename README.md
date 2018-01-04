@@ -1,5 +1,7 @@
 # Archamea
 
+archamea.pythonanywhere.com
+
 A basic django-powered website just for practice. It's a wiki site that allows for account
 creation and loggin in and out. When creating an account an email is sent to you with a link
 to activate that account. Only then can you log in. When logged in you can edit and/or
