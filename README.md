@@ -13,8 +13,8 @@ currently looking to fix:
 1) Serving Media Files In Production.
 
   All the uploaded files are not currently displayed. Normally you configure a dedicated
-  dedicated server to do this like Apache, but I'm trying to just do it inefficiently on
-  the same server for simplicity's sake right now.
+  server to do this like Apache, but I'm trying to do it inefficiently on the same
+  server right now for simplicity's sake.
   
 2) Sending Activation Emails Automatically
   
@@ -33,4 +33,4 @@ currently looking to fix:
   
   There were also button to the right that disappeared. They were made in javascript, and
   allowed for the user to view more than one list of articles simultaneously. The new list
-  or lists would slide in to view, and the width of the current list would shrink.
+  or lists would slide into view, and the width of the current list would shrink.
