@@ -29,7 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['archamea.pythonanywhere.com', '127.0.0.1']
 
 CRONJOBS = [
-    ('*/1 * * * *', 'python3 manage.py send_queued_mail >> send_mail.log 2>&1')
+    ('*/1 * * * *', 'cd Archamea/python3 manage.py send_queued_mail >> send_mail.log 2>&1')
 ]
 
 # Application definition
