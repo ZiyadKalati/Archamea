@@ -17,16 +17,27 @@
  * appended to DOM.
  */
  
-      var $otherArticlesNav = $(".other-articles nav li");
+      var $otherArticlesNav = $("#secondary-nav nav");
       
-      var $options = $("<span class='options'>\
-		  			 <li class='active'>One</li>\
-					 <li>Two</li>\
-					 <li>Three</li>\
-					 <li>Four</li></span>");
+      var $options = $("<div class='btn-group btn-group-toggle options' data-toggle='buttons'>\
+             <li class='active'>One</li>\
+             <li>Two</li>\
+             <li>Three</li>\
+             <li>Four</li>\
+            </div>");
 
-	  $otherArticlesNav.parent().append($options);
-	
+	  /*$otherArticlesNav.parent().append($options);  I'm gonna ignore these tabs for now*/
+
+	/*<label class="short-story btn btn-outline-primary btn-sm active" id="short-story">\
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Short Story\
+              </label>\
+              <label class="biography btn btn-outline-primary btn-sm" id="biography">\
+                <input type="radio" name="options" id="option2" autocomplete="off"> Biography\
+              </label>\
+              <label class="non-fiction btn btn-outline-primary btn-sm" id="non-fiction">\
+                <input type="radio" name="options" id="option3" autocomplete="off"> Non-Fiction\
+              </label>\
+              */
 /*
  * Check if target is the current active tab; if not then run block of code to change
  * the active tab and also the content that is shown on the page. First you filter
@@ -42,18 +53,18 @@
  */
       $otherArticlesNav.on("click", function(event){
 	    var $target = $(event.target);
-	  
-	    if (!$target.is(".current") && !$target.parent().is(".options"))
+
+	    if (!$target.is(".active") && !$target.parent().is(".options"))
 	    { 
 	      $otherArticlesNav.each(function(index){
 	        var $this = $(this);
-	        if ($this.is(".current"))
+	        if ($this.is(".active"))
 	        {
-	          $this.removeClass("current");
+	          $this.removeClass("active");
   	          $otherArticlesSections.eq(index).hide();
 
 		      $otherArticlesSections.eq($target.index()).fadeIn(350);	        
-		      $target.addClass("current");
+		      $target.addClass("active");
 
 	          return false;
 	        }
@@ -68,7 +79,7 @@
 	$options.on("click", "li", function(event){
 	  var $target = $(event.target);
 	  
-	  if (!$target.is(".current"))
+	  if (!$target.is(".active"))
 	  {
    	    var $optionsChildren = $options.children();
         var $targetIndexPlusOne = $target.index() + 1;
@@ -77,11 +88,11 @@
 	    var widthAdjust = ($target.index() * 10) / $targetIndexPlusOne;
 	    articleGridWidth = Math.floor(width / ($targetIndexPlusOne)) - widthAdjust;
 	    
-		$optionsChildren.filter(".current").removeClass("current");
-	    $target.addClass("current");
+		$optionsChildren.filter(".active").removeClass("active");
+	    $target.addClass("active");
 	    
-	    $otherArticlesNav.slice(0, $targetIndexPlusOne).addClass("current");
-	    $otherArticlesNav.slice($targetIndexPlusOne).removeClass("current");
+	    $otherArticlesNav.slice(0, $targetIndexPlusOne).addClass("active");
+	    $otherArticlesNav.slice($targetIndexPlusOne).removeClass("active");
 	      
 	      if ($target.index() > currentIndex)
 	      {

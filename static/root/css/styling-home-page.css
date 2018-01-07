@@ -84,9 +84,9 @@ aside {
 .other-articles {
   /*border: 1px solid black;*/
   padding: 5px;
-  height: 610px;
+  /*height: 610px;*/
   text-align: left;
-  overflow: hidden;
+  /*overflow: hidden;*/
   }
 
 .other-articles ul {
@@ -110,7 +110,7 @@ aside {
   float: right;
   margin-right: 20px;
   }
-  
+
 .the-articles {
   width: 95%;
   margin: 0px auto;
