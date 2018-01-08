@@ -31,7 +31,7 @@ currently looking to fix:
 3) Fixing Buttons On Home Page
 
   They stopped working when I changed the css from custom to bootstrap. Before the list of
-  articles would be replaced by a fade in transition of a new list of articles.
+  articles would be replaced by a fade in transition of a new list of articles. ***This one is fixed now***
   
   There were also button to the right that disappeared. They were made in javascript, and
   allowed for the user to view more than one list of articles simultaneously. The new list
