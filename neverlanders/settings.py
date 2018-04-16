@@ -28,9 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['archamea.pythonanywhere.com', '127.0.0.1']
 
-CRONJOBS = [
-    ('*/1 * * * *', '/python3 manage.py send_queued_mail', '>> send_mail.log 2>&1')
-]
 
 # Application definition
 
@@ -41,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.sessions',
     'django.contrib.staticfiles',
-    'django_crontab',
     'post_office',
     'wiki.apps.WikiConfig',
 ]
